@@ -3,6 +3,10 @@ Deep Asteroid NASA SPACE APPS CHALLENGE PROJECT
 Classification and prediction using PHA ( Potential Hazarous Asteroids and Tholen Clssification datasets )
 Find bellow a representation of the arquitecture of the project 
 
+Know more at:
+https://open.nasa.gov/innovation-space/deep-asteroid/
+https://2016.spaceappschallenge.org/challenges/solar-system/near-earth-objects-machine-learning/projects/deep-asteriod
+
 The project include :
 1st layer) Aten / Apollo classifier
 2nd layer) Aten / Apollo classifier

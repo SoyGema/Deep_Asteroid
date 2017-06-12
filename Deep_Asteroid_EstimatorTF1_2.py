@@ -92,3 +92,15 @@ eval_input_fn = tf.estimator.inputs.pandas_input_fn(x=eval_data, y=eval_label, b
 Emoid = tf.feature_column.numeric_column('Emoid')
 .....
 Class = tf.feature_column.categorical_column_with_vocabulary_list('Class', ['Aten', 'Apollo'])
+
+#Make a list of the linear features
+linear_features = [q, Q, EMoid, H, Epoch, M,
+                   Peri, Node, Incl, e, a, Opps]
+
+#Set the regressor
+regressor = tf.contrib.learn.LinearRegressor(feature_columns=linear_features)
+
+#Set the fit of the regressor 
+regressor.fit(input_fn=training_input_fn, steps=10000)
+
+regressor.evaluate(input_fn=eval_input_fn)

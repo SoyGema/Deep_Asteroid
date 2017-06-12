@@ -27,7 +27,7 @@ names = [
     'Discovery date',
     'site',
     'discoverers',
-    'Class',
+    'Class', #Aten or Apollo. Classification 
 ]
 
 dtypes = {
@@ -66,9 +66,9 @@ df[float_columns] = df[float_columns].fillna(value=0., axis='columns')
 string_columns = [i for i,x in dtypes.items() if x == str]
 df[string_columns] = df[string_columns].fillna(value='', axis='columns')
 
-#Split the data into a training set and a eval set
-training_data = df[:80]
-eval_data = df[80:]
+#Split the data into a training set and a eval set in a 90 / 10 split : Total dataset 9290 entries
+training_data = df[:8361]
+eval_data = df[8361:]
 
 #Separate input features from labels
 training_label = training_data.pop('Class')

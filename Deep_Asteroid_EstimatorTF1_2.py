@@ -8,22 +8,52 @@ import numpy as np
 
 #Headers
 names = [
-    'Emoid',
+    'Designation(name)',
+    'Prov. Desc.', #provisional designation
+    'q', #Perihelion distance
+    'Q', #Aphelion distance   
+    'Emoid', #minium distance between earth orbit and minor planet 
+    'H', #absolute visual magnitude   
     'Epoch',
-    'H',
-    'q',
-    'Q',
-    'Class',
+    'M',
+    'Peri', #1 Argument of perihelion
+    'Node', #1 longitude of the ascending node
+    'Incl', #1 inclination
+    'e', #orbital eccentricity
+    'a', #Semimajor axis 
+    'Opps', #number of oppositions 
+    'Ref',
+    'Designation',
     'Discovery date',
+    'site',
+    'discoverers',
+    'Class',
 ]
 
 dtypes = {
-    'Emoid': np.float32,
-    'Epoch': datetime?,
-    'H': np.float32,
+        'Designation(name)',
+    'Prov.',
+    'Desc.',
     'q': np.float32,
-    'Q': np.float32,
+    'Q': np.float32,    
+    'Emoid': np.float32,
+    'H': np.float32,    
+    'Epoch',
+    'M',
+    'Peri',
+    'Node',
+    'Incl',
+    'e',
+    'a',
+    'Opps',
+    'Ref',
+    'Designation',
+    'Discovery date',
+    'site',
+    'discoverers',
     'Class': str,
+    'Epoch': datetime?,
+
     'Discovery date': datetime,
 }
 

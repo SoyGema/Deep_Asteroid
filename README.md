@@ -13,3 +13,6 @@ The project include :
 3rd layer) Tholen classifier 
 
 ![alt tag](https://github.com/SoyGema/Deep-Asteroid/blob/master/Presentation/arquitectureFull.jpg)
+
+Besides, you can find another experiment with Asteroids here
+https://github.com/SoyGema/Prophet_forecasting

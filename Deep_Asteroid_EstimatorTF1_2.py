@@ -103,7 +103,7 @@ Incl = tf.feature_column.numeric_column('Incl')
 e = tf.feature_column.numeric_column('e')
 a = tf.feature_column.numeric_column('a')
 Opps = 
-Ref = 
+Ref = tf.feature_column.categorical_column_with_vocabulary_list('Ref', ['MPCs', 'MPOs'])
 Designation = 
 Discovery Date = 
 Site = tf.feature_column.categorical_column_with_vocabulary_file(key='Site', vocabulary_file = '/us/site.txt', vocabulary_size = 50, num_oov_buckets=5)
@@ -123,3 +123,15 @@ regressor = tf.contrib.learn.LinearRegressor(feature_columns=linear_features)
 regressor.fit(input_fn=training_input_fn, steps=10000)
 
 regressor.evaluate(input_fn=eval_input_fn)
+
+dnn_features = [
+    #numerical features
+    q, Q, EMoid, H, Epoch, M, Peri, Node,
+    Incl, e, a, Opps,    
+    # densify categorical features:
+    tf.feature_column.indicator_column(q),
+    tf.feature_column.indicator_column(Q),
+    tf.feature_column.indicator_column(Emoid),
+    tf.feature_column.indicator_column(e),
+    tf.feature_column.indicator_column(a),
+]

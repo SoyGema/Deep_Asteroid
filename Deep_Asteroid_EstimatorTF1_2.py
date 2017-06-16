@@ -88,7 +88,27 @@ eval_input_fn = tf.estimator.inputs.pandas_input_fn(x=eval_data, y=eval_label, b
 # Describe how the model should interpret the inputs. The names of the feature columns have to match
 # the names of the series in the dataframe
 
+
+Designation(name) = 
+Prov. Desc =
+q = tf.feature_column.numeric_column('q')
+Q = tf.feature_column.numeric_column('Q')
 Emoid = tf.feature_column.numeric_column('Emoid')
+H = tf.feature_column.numeric_column('H')
+Epoch = 
+M = tf.feature_column.numeric_column('M')
+Peri = tf.feature_column.numeric_column('Peri')
+Node = tf.feature_column.numeric_column('Node')
+Incl = tf.feature_column.numeric_column('Incl')
+e = tf.feature_column.numeric_column('e')
+a = tf.feature_column.numeric_column('a')
+Opps = 
+Ref = 
+Designation = 
+Discovery Date = 
+Site = tf.feature_column.categorical_column_with_vocabulary_file(key='Site', vocabulary_file = '/us/site.txt', vocabulary_size = 50, num_oov_buckets=5)
+Disoverers = tf.feature_column.categorical_column_with_vocabulary_file(key='discoverers', vocabulary_file = '/us/discovers.txt', vocabulary_size = 50, num_oov_buckets=5)
+
 .....
 Class = tf.feature_column.categorical_column_with_vocabulary_list('Class', ['Aten', 'Apollo'])
 

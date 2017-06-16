@@ -135,3 +135,25 @@ dnn_features = [
     tf.feature_column.indicator_column(e),
     tf.feature_column.indicator_column(a),
 ]
+
+dnnregressor = tf.contrib.learn.DNNRegressor(feature_columns=dnn_features, hidden_units=[50, 30, 10])
+dnnregressor.fit(input_fn=training_input_fn, steps=10000)
+
+dnnregressor.evaluate(input_fn=eval_input_fn)
+
+
+
+def experiment_fn(run_config, params):
+  # This function makes an Experiment, containing an Estimator and inputs for training and evaluation.
+  # You can use params and config here to customize the Estimator depending on the cluster or to use
+  # hyperparameter tuning.
+
+  # Collect information for training
+  return tf.contrib.learn.Experiment(estimator=tf.contrib.learn.LinearRegressor(
+                                     feature_columns=linear_features, config=run_config),
+                                     train_input_fn=training_input_fn,
+                                     train_steps=10000,
+                                     eval_input_fn=eval_input_fn)
+
+
+

@@ -156,4 +156,6 @@ def experiment_fn(run_config, params):
                                      eval_input_fn=eval_input_fn)
 
 
-
+import shutil
+shutil.rmtree("/tmp/output_dir", ignore_errors=True)
+tf.contrib.learn.learn_runner.run(experiment_fn, run_config=tf.contrib.learn.RunConfig(model_dir="/tmp/output_dir"))

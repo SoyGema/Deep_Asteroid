@@ -1,4 +1,5 @@
 # Deep-Asteroid
+Project under development
 Deep Asteroid NASA SPACE APPS CHALLENGE PROJECT 
 Classification and prediction using PHA ( Potential Hazarous Asteroids and Tholen Clssification datasets )
 Find bellow a representation of the arquitecture of the project 
@@ -14,5 +15,5 @@ The project include :
 
 ![alt tag](https://github.com/SoyGema/Deep-Asteroid/blob/master/Presentation/arquitectureFull.jpg)
 
-Besides, you can find another experiment with Asteroids here
+Besides, you can find another experiment with the same PHA dataset here
 https://github.com/SoyGema/Prophet_forecasting

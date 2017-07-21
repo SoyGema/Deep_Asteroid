@@ -9,7 +9,7 @@ import datetime
 
 #Read data
 
-df = pd.read_csv('/home/gparreno/Deep-Asteroid/V3/Asteroids_data2.csv')
+df = pd.read_csv('/path/Asteroids_data2.csv')
 
 
 #Select parts of the datasets and concatenate them 
@@ -27,3 +27,38 @@ df2 = df.rename(columns = lambda x: x.strip())
 
 df2['is_training'] = np.random.uniform(0, 1, len(df2)) <= .75
 train, test = df2[df2['is_training']==True], df2[df2['is_training']==False]
+
+#See the length of train and test sets 
+
+len(train)
+len(test)
+
+#Remove spaces from values in columns
+
+test['Type'].str.replace('\s+', '')
+
+#Select features 
+
+features = df2.columns[1:12]
+
+#Convert labels into array of numbers 
+
+y = pd.factorize(y2)[0]
+
+#Call the classifier and fit it in with the data 
+
+clf = RandomForestClassifier(n_jobs=2)
+clf.fit(train[features], y)
+
+#Evauate classifier 
+
+clf.predict(test[features])
+clf.predict_proba(test[features])[0:10]
+test['Type'].head()
+
+#List the importance of features
+
+list(zip(train[features], clf.feature_importances_))
+
+
+

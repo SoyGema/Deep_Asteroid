@@ -15,5 +15,10 @@ The project include :
 
 ![alt tag](https://github.com/SoyGema/Deep-Asteroid/blob/master/Presentation/arquitectureFull.jpg)
 
-Besides, you can find another experiment with the same PHA dataset here
+# Another Experiments with Asteroid Dataset
+
+Besides, you can find another experiment with the same PHA dataset with Prohpet, forecasting tool here
 https://github.com/SoyGema/Prophet_forecasting
+
+You can find in this repository a Random Forest Apollo Classifier in orther to extract relevant features 
+https://github.com/SoyGema/Deep-Asteroid/tree/master/Random%20Forest

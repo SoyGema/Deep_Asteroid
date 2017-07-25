@@ -1,7 +1,7 @@
 # Deep-Asteroid
 Project under development
 Deep Asteroid NASA SPACE APPS CHALLENGE PROJECT 
-Classification and prediction using PHA ( Potential Hazarous Asteroids and Tholen Clssification datasets )
+Classification and prediction using PHA ( Potential Hazarous Asteroids and Tholen Classification datasets )
 Find bellow a representation of the arquitecture of the project 
 
 Know more at:

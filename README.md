@@ -1,5 +1,5 @@
 # Deep-Asteroid
-Project under development.
+
 Deep Asteroid NASA SPACE APPS CHALLENGE 2016 Global finalist PROJECT 
 Classification and prediction using PHA ( Potential Hazarous Asteroids and Tholen Classification datasets )
 Find bellow a representation of the arquitecture of the project 
